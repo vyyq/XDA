@@ -123,7 +123,6 @@ def xda_prediction(model, tokens, start_idx=0, end_idx=-1):
     return labels
 
 
-
 def get_token_list(dirname, filename, start_idx=0, end_idx=-1):
     tokens = []
     f_truth = open(f'{dirname}/truth_labeled_code/{filename}', 'r')
@@ -140,7 +139,7 @@ def get_token_list(dirname, filename, start_idx=0, end_idx=-1):
 
     f_truth.close()
     return tokens
-   
+
 
 def get_truth_labels(dirname, filename, start_idx=0, end_idx=-1):
     labels = []
@@ -165,6 +164,7 @@ def get_truth_labels(dirname, filename, start_idx=0, end_idx=-1):
 
     f_truth.close()
     return labels
+
 
 def get_ida_labels(dirname, filename, start_idx=0, end_idx=-1):
     labels = []
@@ -203,6 +203,7 @@ def print_labels(labels):
             sys.exit('Error in print_labels')
     print()
 
+
 def print_tokens(tokens, labels=None):
     if labels:
         for (token, label) in zip(tokoens, labels):
@@ -217,12 +218,12 @@ def print_tokens(tokens, labels=None):
     else:
         for token in tokens:
             print(f'{token}', end=' ')
-  
+
 
 def main():
     max_index = -1
     debug_mode = False
-    print_labels = False
+    will_print_labels = False
 
     try:
         opts, args = getopt.getopt(sys.argv[1:], '', ['debug-mode', 'print-labels', 'max-index='])
@@ -235,8 +236,8 @@ def main():
         elif opt in ['--debug-mode']:
             debug_mode = True
         elif opt in ['--print-labels']:
-            print_labels = True
- 
+            will_print_labels = True
+
     if debug_mode:
         print("DEBUG MODE ON")
     else:
@@ -252,7 +253,6 @@ def main():
     else:
         print('max_index is not specified')
 
-   
     # Load our model
     roberta = \
     RobertaModel.from_pretrained('checkpoints/finetune_msvs_funcbound_64', \
@@ -261,12 +261,12 @@ def main():
                                  bpe=None, \
                                  user_dir='finetune_tasks')
     roberta.eval()
-    
+
     dirname = 'data-raw/msvs_funcbound_64_bap_test'
-    
+
     files_path = 'data-raw/msvs_funcbound_64_bap_test/truth_labeled_code'
     files = [f for f in os.listdir(files_path)]
-    
+
     for filename in files:
         print('Playing with file: {}'.format(filename))
         tokens = get_token_list(dirname, filename, 0, max_index)
@@ -275,7 +275,7 @@ def main():
         truth_labels = get_truth_labels(dirname, filename, 0, max_index)
         IDA_labels = get_ida_labels(dirname, filename, 0, max_index)
 
-        if (print_labels):
+        if (will_print_labels):
             print("Truth Labels:")
             print_labels(truth_labels)
             print("XDA Labels:")
