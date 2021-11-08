@@ -1,0 +1,56 @@
+DEBUG MODE OFF
+PRINT LABEL OFF
+max_index is not specified
+| [input] dictionary: 265 types
+| [label] dictionary: 9 types
+
+Playing with file: msvs_64_O2_smtpsend
+The number of tokens is 4096
+IDA --- msvs_64_O2_smtpsend (total 4094): TP: 33, FP: 11, FN: 5, TN: 4045, precision: 0.75, recall: 0.868421052631579, F1: 0.8048780487804879
+XDA --- msvs_64_O2_smtpsend (total 4096): TP: 38, FP: 0, FN: 2, TN: 4056, precision: 1.0, recall: 0.95, F1: 0.9743589743589743
+
+Playing with file: msvs_64_O1_psftp
+The number of tokens is 380416
+IDA --- msvs_64_O1_psftp (total 380395): TP: 2846, FP: 17, FN: 261, TN: 377271, precision: 0.9940621725462802, recall: 0.9159961377534599, F1: 0.9534338358458962
+XDA --- msvs_64_O1_psftp (total 380413): TP: 3029, FP: 0, FN: 96, TN: 377288, precision: 1.0, recall: 0.96928, F1: 0.9844003899902504
+
+Playing with file: msvs_64_O2_hidapi
+The number of tokens is 7680
+IDA --- msvs_64_O2_hidapi (total 7678): TP: 73, FP: 16, FN: 6, TN: 7583, precision: 0.8202247191011236, recall: 0.9240506329113924, F1: 0.8690476190476191
+XDA --- msvs_64_O2_hidapi (total 7680): TP: 76, FP: 0, FN: 5, TN: 7599, precision: 1.0, recall: 0.9382716049382716, F1: 0.9681528662420382
+
+Playing with file: msvs_64_Ox_pageant
+The number of tokens is 196096
+IDA --- msvs_64_Ox_pageant (total 196083): TP: 1548, FP: 12, FN: 205, TN: 194318, precision: 0.9923076923076923, recall: 0.8830576155162578, F1: 0.9345004527618472
+XDA --- msvs_64_Ox_pageant (total 196095): TP: 1703, FP: 0, FN: 62, TN: 194330, precision: 1.0, recall: 0.964872521246459, F1: 0.9821222606689735
+
+Playing with file: msvs_64_O1_pscp
+The number of tokens is 375296
+IDA --- msvs_64_O1_pscp (total 375273): TP: 2816, FP: 18, FN: 253, TN: 372186, precision: 0.9936485532815809, recall: 0.9175627240143369, F1: 0.9540911400982551
+XDA --- msvs_64_O1_pscp (total 375293): TP: 3003, FP: 0, FN: 86, TN: 372204, precision: 1.0, recall: 0.9721592748462285, F1: 0.9858831254103743
+
+Playing with file: msvs_64_Od_putty
+The number of tokens is 842240
+IDA --- msvs_64_Od_putty (total 842222): TP: 3645, FP: 31, FN: 225, TN: 838321, precision: 0.9915669205658324, recall: 0.9418604651162791, F1: 0.9660747415849457
+XDA --- msvs_64_Od_putty (total 842237): TP: 3809, FP: 3, FN: 76, TN: 838349, precision: 0.9992130115424974, recall: 0.9804375804375804, F1: 0.9897362608808628
+
+Playing with file: msvs_64_Ox_pbc
+The number of tokens is 2560
+IDA --- msvs_64_Ox_pbc (total 2559): TP: 32, FP: 14, FN: 6, TN: 2507, precision: 0.6956521739130435, recall: 0.8421052631578947, F1: 0.761904761904762
+XDA --- msvs_64_Ox_pbc (total 2560): TP: 34, FP: 0, FN: 5, TN: 2521, precision: 1.0, recall: 0.8717948717948718, F1: 0.9315068493150686
+
+Playing with file: msvs_64_O2_vim
+The number of tokens is 2107904
+IDA --- msvs_64_O2_vim (total 2107880): TP: 8759, FP: 48, FN: 1277, TN: 2097796, precision: 0.9945497899398206, recall: 0.8727580709445995, F1: 0.9296821100673991
+XDA --- msvs_64_O2_vim (total 2107904): TP: 9980, FP: 6, FN: 80, TN: 2097838, precision: 0.9993991588223513, recall: 0.9920477137176938, F1: 0.9957098673051981
+
+Playing with file: msvs_64_O2_libsodium
+The number of tokens is 373248
+IDA --- msvs_64_O2_libsodium (total 373245): TP: 514, FP: 15, FN: 6, TN: 372710, precision: 0.9716446124763705, recall: 0.9884615384615385, F1: 0.9799809342230695
+XDA --- msvs_64_O2_libsodium (total 373246): TP: 507, FP: 3, FN: 14, TN: 372722, precision: 0.9941176470588236, recall: 0.9731285988483686, F1: 0.9835111542192047
+
+Playing with file: msvs_64_Od_puttygen
+The number of tokens is 363008
+IDA --- msvs_64_Od_puttygen (total 362995): TP: 1949, FP: 16, FN: 206, TN: 360824, precision: 0.9918575063613232, recall: 0.9044083526682135, F1: 0.9461165048543689
+XDA --- msvs_64_Od_puttygen (total 363007): TP: 2108, FP: 0, FN: 59, TN: 360840, precision: 1.0, recall: 0.972773419473927, F1: 0.9861988304093567
+---END---
