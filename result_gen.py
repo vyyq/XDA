@@ -243,7 +243,7 @@ def main():
     else:
         print("DEBUG MODE OFF")
 
-    if print_labels:
+    if will_print_labels:
         print("PRINT LABEL ON")
     else:
         print("PRINT LABEL OFF")
