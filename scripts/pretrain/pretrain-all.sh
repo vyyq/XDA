@@ -22,6 +22,6 @@ CUDA_VISIBLE_DEVICES=0 python train.py \
     --max-sentences $MAX_SENTENCES --update-freq $UPDATE_FREQ \
     --max-update $TOTAL_UPDATES --log-format json --log-interval 10 \
     --no-epoch-checkpoints --save-dir checkpoints/pretrain_all/ \
-    --memory-efficient-fp16 \
     --mask-prob 0.2 --random-token-prob 0.5 \
     | tee -a result/pretrain_all
+    # --memory-efficient-fp16 \
